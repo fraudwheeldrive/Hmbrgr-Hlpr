@@ -20,3 +20,13 @@ When i log in i am presented a clear menue where i am given the options to:
 
 I should also be able to display all the stores I own and be able to add new stores as I expand. 
 
+## built with: 
+*   "bcrypt": "^5.0.1",
+*   "connect-session-sequelize": "^7.1.1",
+*   "dotenv": "^10.0.0",
+*    "express": "^4.17.1",
+*    "express-handlebars": "^5.3.2",
+*    "express-sessions": "^1.0.6",
+*    "mysql2": "^2.2.5",
+*    "node": "^16.1.0",
+*    "sequelize": "^6.6.2"
