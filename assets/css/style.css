@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ body {
+
+    color: grey;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+
+.background {
+/* The image used */
+background-image: url("../images/AdobeStock_127928024.jpeg");
+
+/* Set a specific height */
+min-height: 3000px;
+
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-blend-mode: color-burn;
+/* apply styles to <header> */
+
+}
+
+header {
+    padding: 90px 200px 40px;
+    background-color: rgb(19, 18, 18);
+    display: flex;
+    justify-content: space-between;
+    opacity: 80%;
+    
+}
+
+header h1 {
+
+    padding: 0 0 40px;
+    font-weight: bold;
+    font-size: 80px;
+    color: brown;
+    display: inline;
+}
+
+header a {
+    text-decoration: none;
+    color: rgb(148, 132, 30);
+}
+
+header nav {
+    display: flex;
+    margin: 7px 0;
+}
+
+header nav ul li {
+    display: inline;
+    
+}
+
+header nav ul li a {
+   
+    margin: 0 30px;
+    font-weight: lighter;
+    font-size: 30px;
+    
+}
+
+
+  
+
+
