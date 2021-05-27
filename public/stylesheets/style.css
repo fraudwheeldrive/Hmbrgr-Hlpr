@@ -29,7 +29,7 @@ background-blend-mode: color-burn;
 }
 
 header {
-    padding: 90px 200px 40px;
+    padding: 90px 175px 40px;
     background-color: rgb(19, 18, 18);
     display: flex;
     justify-content: space-between;
@@ -40,7 +40,7 @@ header {
 
 header h1 {
 
-    padding: 0px 20px 30px;
+    padding: 0px 20px 45px;
     font-weight: bold;
     font-size: 80px;
     color: brown;
@@ -63,19 +63,23 @@ header nav ul li {
 }
 
 header nav ul li a {   
-    margin: 0 30px;
+    margin: 0 20px;
     font-weight: lighter;
     font-size: 30px;
     
 }
 
 .signin{
+
     padding: 30px 0px 20px;
-    background-color: rgb(19, 18, 18);
+    background-color: black;
     border-radius: 10px;
     text-align: center;
     text-decoration: none;
+    
 }
+    
+
 .start{
     position: absolute;
     
@@ -109,6 +113,7 @@ header nav ul li a {
     top: 340px;
     left: 120PX;   
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    border-radius: 10px;
 } 
 
 
