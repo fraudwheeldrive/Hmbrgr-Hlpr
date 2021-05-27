@@ -34,12 +34,13 @@ header {
     display: flex;
     justify-content: space-between;
     opacity: 80%;
+   
     
 }
 
 header h1 {
 
-    padding: 0 0 40px;
+    padding: 0px 20px 30px;
     font-weight: bold;
     font-size: 80px;
     color: brown;
@@ -70,16 +71,33 @@ header nav ul li a {
 
 .signin{
     padding: 30px 0px 20px;
-    background-color: black;
+    background-color: rgb(19, 18, 18);
     border-radius: 10px;
     text-align: center;
     text-decoration: none;
 }
+.start{
+    position: absolute;
+    
+    width: 30%;
+    height: 0%;
+    
+    font-weight: lighter;
+    opacity: 60%;    
+   
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(148, 132, 30);
+    top: 280px;
+    left: 120PX;   
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+}
 .welcome-form {
     position: absolute;
-    top: 50;
+    font-weight: lighter;
     width: 30%;
-    height: 40%;
+    height: 36%;
     overflow: hidden;
     background-color: black;
     opacity: 60%;    
@@ -88,10 +106,10 @@ header nav ul li a {
     text-decoration: none;
     font-size: 20px;
     color: rgb(148, 132, 30);
-    top: 280px;
-    left: 20PX;   
-    font-family: 'Times New Roman', Times, serif; 
-}
+    top: 340px;
+    left: 120PX;   
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+} 
 
 
   
