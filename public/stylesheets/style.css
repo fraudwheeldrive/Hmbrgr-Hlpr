@@ -23,7 +23,7 @@
 background-image: url("../images/AdobeStock_127928024.jpeg");
 
 /* Set a specific height */
-min-height: 1200px;
+min-height: 1400px;
 
 /* Create the parallax scrolling effect */
 background-attachment: fixed;
@@ -49,7 +49,7 @@ header h1 {
 
     padding: 0px 20px 45px;
     font-weight: bold;
-    font-size: 60px;
+    font-size: 50px;
     /* color: brown; */
     display: inline;
 }
@@ -96,7 +96,7 @@ header nav a {
     text-decoration: none;
     font-size: 20px;
     color: rgb(216, 209, 147);
-    top: 290px;
+    top: 360px;
     left: 120PX;   
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
 }
@@ -104,7 +104,7 @@ header nav a {
     position: absolute;
     font-weight: lighter;
     width: 30%;
-    height: 36%;
+    height: 24%;
     overflow: hidden;
     background-color: rgb(20, 20, 20);
     opacity: 60%;    
@@ -113,7 +113,7 @@ header nav a {
     text-decoration: none;
     font-size: 20px;
     color: rgb(216, 209, 147);
-    top: 350px;
+    top: 430px;
     left: 120PX;   
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     border-radius: 10px;
@@ -130,7 +130,7 @@ main {
     text-align: left;
     font-size: 20px;
     /* color: rgb(7, 7, 7); */
-    top: 980px;
+    top: 1100px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
     
 }
@@ -163,7 +163,7 @@ main nav ul li {
 main nav ul li a {   
     margin: 0px 40px;
     font-weight: lighter;
-    font-size: 30px;
+    font-size: 40px;
     
 }
 
@@ -175,12 +175,12 @@ main nav ul li a {
     overflow: hidden;
     background-color: black;
     opacity: 50%;    
-    padding: 15px;
+    padding: 20px;
     text-align: center;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 30px;
     color: rgb(218, 194, 45);
-    top: 1150px;
+    top: 1300px;
     display: flex;
     justify-content: center;  
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
