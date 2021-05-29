@@ -3,11 +3,25 @@ const sequelize = require('../config/connection');
 
 
 class User extends Model {}
+//need pword validation 
 
 
 User.init(
     {
-      
+      Id:{
+
+      },
+      username: {
+
+      },
+
+      email: {
+
+      },
+
+      password: {
+
+      }  
     },
     {
       sequelize,
