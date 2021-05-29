@@ -49,7 +49,7 @@ header h1 {
 
     padding: 0px 20px 45px;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 40px;
     /* color: brown; */
     display: inline;
 }
@@ -97,7 +97,7 @@ header nav a {
     font-size: 20px;
     color: rgb(216, 209, 147);
     top: 360px;
-    left: 120PX;   
+    left: 90PX;   
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
 }
 .welcome-form {
@@ -114,7 +114,7 @@ header nav a {
     font-size: 20px;
     color: rgb(216, 209, 147);
     top: 430px;
-    left: 120PX;   
+    left: 90PX;   
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     border-radius: 10px;
 } 
