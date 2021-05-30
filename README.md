@@ -11,14 +11,14 @@ Additional store can be registered to the system as the restaurant chain expand.
 
 > **Benefit to implement Hmbrgr-Hlpr CMS**
 >- [x] Reduce inconsistency of menu and prices across restaurants
-    * Restaurants will pull their set menu from the same data base
-    * Standardized discount and promotion during special event and promotion discount
+>   * Restaurants will pull their set menu from the same data base
+>   * Standardized discount and promotion during special event and promotion discount
 >- [x] Reduce human error 
-    * Updates would be automatically sent to the restaurant digital menu on the launch date
-    * Eliminate shipping costs and possibly delays of promotional signage
+>   * Updates would be automatically sent to the restaurant digital menu on the launch date
+>   * Eliminate shipping costs and possibly delays of promotional signage
 >- [x] Provides customization for individual store 
-    * Decrease customers' disappointment with item outage 
-    * Increase exposure of item in response to PAR level and shelf-life
+>   * Decrease customers' disappointment with item outage 
+>   * Increase exposure of item in response to PAR level and shelf-life
 
 
 ## User Story 
