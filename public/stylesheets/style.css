@@ -47,21 +47,13 @@ header {
 
 header h1 {
 
-    padding: 0px 0px 50px;
+    padding: 0px 20px 45px;
     font-weight: bold;
     font-size: 40px;
     /* color: brown; */
     display: inline;
 }
 
-.title{
-    padding: 20px 20px 50px;
-    font-weight: bold;
-    font-size: 40px;
-    margin-left: 400px;
-    
-    
-}
 header a {
     text-decoration: none;
     color: rgb(148, 132, 30);
@@ -137,19 +129,43 @@ main {
     padding: 50px;   
     text-align: left;
     font-size: 20px;
-    color: rgb(7, 7, 7); 
+    /* color: rgb(7, 7, 7); */
     top: 1100px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
     
 }
 
+main h2 {
+
+    padding: 0px 90px 80px;
+    font-weight: bold;
+    font-size: 30px;
+    color: black;
+    display: inline;
+    
+}
+main a {
+    text-decoration: none;
+    color: black;
+}
 
 
+main nav {
+    display: flex;
+    margin: 7px 0px;
+}
 
+main nav ul li {
+    display: inline;
+    
+}
 
-
-
-
+main nav ul li a {   
+    margin: 0px 40px;
+    font-weight: lighter;
+    font-size: 40px;
+    
+}
 
 .foot{
     position: absolute;
@@ -172,7 +188,7 @@ main {
     
 }
 
-@media screen and (min-width: 480px){
+@media screen and (min-width: 768px){
     header h1 {        
         font-weight: lighter;
         font-size: 120px;       
@@ -184,5 +200,5 @@ main {
                
         font-size: 80px;        
         
-    
+    }
 }
