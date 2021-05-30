@@ -1,7 +1,7 @@
 // import important parts of sequelize library
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes } = require("sequelize");
 // import our database connection from config.js
-const sequelize = require('../config/connection');
+const sequelize = require("../config/connection");
 
 // Initialize Product model (table) by extending off Sequelize's Model class
 class Menu extends Model {}
@@ -13,32 +13,30 @@ Menu.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true
+      autoIncrement: true,
     },
     product_name: {
       type: DataTypes.STRING,
-      allowNull: false      
+      allowNull: false,
     },
     ingredients: {
-        type: DataTypes.STRING,
-        allowNull: false   
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     price: {
       type: DataTypes.DECIMAL,
       allowNull: false,
-       validate: {
-        isDecimal: true        
-      }
+      validate: {
+        isDecimal: true,
+      },
     },
-    
-        
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'menu',
+    modelName: "menu",
   }
 );
 
