@@ -15,8 +15,12 @@ Category.init(
     location_name: {
       type: DataTypes.STRING,
       allowNull: false
-    }
-  },
+    },
+      Restaurant_address: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+    },
   {
     sequelize,
     timestamps: false,

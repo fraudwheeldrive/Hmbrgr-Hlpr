@@ -50,7 +50,7 @@ const menudata = [
     {
         id: 7, 
         product_name: "chickenTuggets",
-        ingredients: "6 deepfried chicken tenders",
+        ingredients: " an array [] of 6 deepfried chicken tenders",
         price: 4.79 
     },
     {
@@ -75,6 +75,6 @@ const menudata = [
 
 ]
 
-const seedMenu = () => Post.bulkCreate(menudata);
+const seedMenu = () => Menu.bulkCreate(menudata);
 
 module.exports = seedMenu;
