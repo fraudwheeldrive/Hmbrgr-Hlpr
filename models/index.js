@@ -1,5 +1,6 @@
 const User = require('./User');
 const Menu = require('./Menu');
+const Restaurant = require('./Restaurant')
 
 User.hasMany(Restaurant, {
   foreignKey: 'user_id'
