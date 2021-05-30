@@ -3,10 +3,10 @@ const { Model, DataTypes } = require('sequelize');
 // import our database connection from config.js
 const sequelize = require('../config/connection');
 
-// Initialize Product model (table) by extending off Sequelize's Model class
+// Initialize Menu model (table) by extending off Sequelize's Model class
 class Menu extends Model {}
 
-// set up fields and rules for Product model
+// set up fields and rules for Menu model
 Menu.init(
   {
     id: {
@@ -15,7 +15,7 @@ Menu.init(
       primaryKey: true,
       autoIncrement: true
     },
-    product_name: {
+    description: {
       type: DataTypes.STRING,
       allowNull: false      
     },

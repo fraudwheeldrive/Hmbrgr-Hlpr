@@ -1,49 +1,112 @@
 const router = require('express').Router();
-const { Menu } = require('../../models');
+const { Menu, Restaurant } = require('../../models');
 
+//Menu get all
 router.get('/', (req, res) => {
-  Menu.findAll()
-    .then(dbMenuData => res.json(dbMenuData))
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
+  Menu.findAll({
+    include: [
+      // include the Restaurant location here:
+      {
+        model: Restaurant,
+        attributes: ['id', 'restaurant_number', 'address'],
+      }
+    ]
+  })
+  .then(dbMenuData => res.json(dbMenuData))
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
+//Menu get by ID
+router.get('/:id', (req, res) => {
+  Menu.findOne({
+    where: {
+      id: req.params.id
+    },
+    include: [
+      // include the Restaurant location here:
+      {
+        model: Restaurant,
+        attributes: ['id', 'restaurant_number', 'address'],
+      }
+    ]
+  })
+  .then(dbMenuData => {
+    if (!dbMenuData) {
+      res.status(404).json({ message: 'No menu found with this id' });
+      return;
+    }
+    res.json(dbMenuData);
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
+});
+
+//Add a Menu
 router.post('/', (req, res) => {
-  // check the session
-  if (req.session) {
-    Comment.create({
-      comment_text: req.body.comment_text,
-      post_id: req.body.post_id,
-      // use the id from the session
-      user_id: req.session.user_id
-    })
-      .then(dbCommentData => res.json(dbCommentData))
-      .catch(err => {
-        console.log(err);
-        res.status(400).json(err);
-      });
-  }
+  Menu.create({
+    description: req.body.description,
+    ingredients: req.body.ingredients,
+    price: req.body.price,
+    location: req.body.location
+  })
+  .then(dbMenuData => res.json(dbMenuData))
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
-router.delete('/:id', withAuth, (req, res) => {
-  Comment.destroy({
+//Update a Menu
+router.put('/:id', (req, res) => {
+  Menu.update(
+    {
+      description: req.body.description,
+      ingredients: req.body.ingredients,
+      price: req.body.price,
+      location: req.body.location
+    },
+    {
+      where: {
+        id: req.params.id
+      }
+    }
+  )
+  .then(dbMenuData => {
+    if (!dbMenuData) {
+      res.status(404).json({ message: 'No menu found with this id' });
+      return;
+    }
+    res.json(dbMenuData);
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
+});
+
+
+router.delete('/:id', (req, res) => {
+  Menu.destroy({
     where: {
       id: req.params.id
     }
   })
-    .then(dbCommentData => {
-      if (!dbCommentData) {
-        res.status(404).json({ message: 'No comment found with this id!' });
-        return;
-      }
-      res.json(dbCommentData);
-    })
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
+  .then(dbMenuData => {
+    if (!dbMenuData) {
+      res.status(404).json({ message: 'No menu found with this id' });
+      return;
+    }
+    res.json(dbMenuData);
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
 module.exports = router;
