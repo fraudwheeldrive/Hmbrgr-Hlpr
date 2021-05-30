@@ -10,13 +10,13 @@ The system is protected with encrypted user passwords so only authorized user ca
 Additional store can be registered to the system as the restaurant chain expand.
 
 > **Benefit to implement Hmbrgr-Hlpr CMS**
-- [x] Reduce inconsistency of menu and prices across restaurants
+>- [x] Reduce inconsistency of menu and prices across restaurants
     * Restaurants will pull their set menu from the same data base
     * Standardized discount and promotion during special event and promotion discount
-- [x] Reduce human error 
+>- [x] Reduce human error 
     * Updates would be automatically sent to the restaurant digital menu on the launch date
     * Eliminate shipping costs and possibly delays of promotional signage
-- [x] Provides customization for individual store 
+>- [x] Provides customization for individual store 
     * Decrease customers' disappointment with item outage 
     * Increase exposure of item in response to PAR level and shelf-life
 
@@ -36,7 +36,7 @@ WHEN I input my email and password
 THEN I will see a error message or successfully directed to the homepage  
 #### **HOMEPAGE**
 WHEN I get to the homepage  
-THEN I am given the options of  
+THEN I am given the options to  
 ` View / update standard menu items `  
 ` View / update store menu items (Store level) `  
 ` View store list/ Add new store to system `  
