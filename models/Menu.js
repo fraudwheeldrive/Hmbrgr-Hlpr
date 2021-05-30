@@ -20,7 +20,7 @@ Menu.init(
       allowNull: false      
     },
     ingredients: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: false   
     },
     price: {
@@ -30,8 +30,13 @@ Menu.init(
         isDecimal: true        
       }
     },
-    
-        
+    location: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'restaurant',
+        key: 'id'
+      }
+    }  
   },
   {
     sequelize,
