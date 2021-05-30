@@ -6,7 +6,7 @@
 
  body {
 
-    color: none;
+    color: grey;
     font-family: Helvetica, Arial, sans-serif;
 }
 
@@ -36,7 +36,7 @@ background-blend-mode: color-burn;
 }
 
 header {
-    padding: 60px 20px 40px;
+    padding: 90px 175px 40px;
     background-color: rgb(19, 18, 18);
     display: flex;
     justify-content: space-between;
@@ -49,15 +49,12 @@ header h1 {
 
     padding: 0px 20px 45px;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 40px;
     /* color: brown; */
     display: inline;
-    font-family: Helvetica, Arial, sans-serif;
-    left: 20px;
 }
 
 header a {
-    font-size: 2rem;
     text-decoration: none;
     color: rgb(148, 132, 30);
 }
@@ -79,9 +76,9 @@ header nav a {
     
 }
 
-.nav-item{
+.login{
 
-    padding: 10px 0px 0px;
+    padding: 30px 0px 20px;
     background-color: black;
     border-radius: 10px;
     text-align: center;
@@ -99,7 +96,7 @@ header nav a {
     text-decoration: none;
     font-size: 20px;
     color: rgb(216, 209, 147);
-    top: 260px;
+    top: 360px;
     left: 90PX;   
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
 }
@@ -107,7 +104,7 @@ header nav a {
     position: absolute;
     font-weight: lighter;
     width: 30%;
-    height: 45%;
+    height: 24%;
     overflow: hidden;
     background-color: rgb(20, 20, 20);
     opacity: 60%;    
@@ -116,7 +113,7 @@ header nav a {
     text-decoration: none;
     font-size: 20px;
     color: rgb(216, 209, 147);
-    top: 340px;
+    top: 430px;
     left: 90PX;   
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     border-radius: 10px;
@@ -193,7 +190,8 @@ main nav ul li a {
 
 @media screen and (min-width: 768px){
     header h1 {        
-        font-weight: lighter;    
+        font-weight: lighter;
+        font-size: 120px;       
        
     }
     .foot{
