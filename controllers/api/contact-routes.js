@@ -1,4 +1,4 @@
-// POST /api/users
+// POST /api/contact
 router.post('/', (req, res) => {
     Contact.create({
       username: req.body.username,

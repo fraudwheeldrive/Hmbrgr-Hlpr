@@ -62,8 +62,8 @@ Contact.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'menu',
+    modelName: 'contact',
   }
 );
 
-module.exports = Menu;
+module.exports = contact;
