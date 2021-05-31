@@ -1,5 +1,5 @@
 //const sequelize = require('../config/connection');
-const { location } = require("../models");
+const { Restaurant } = require("../models");
 
 //id, Restaurant number, restaurant addresss
 
@@ -26,6 +26,6 @@ const restaurantdata = [
   },
 ];
 
-const seedLocation = () => Location.bulkCreate(restaurantdata);
+const seedLocation = () => Restaurant.bulkCreate(restaurantdata);
 
 module.exports = seedLocation;
