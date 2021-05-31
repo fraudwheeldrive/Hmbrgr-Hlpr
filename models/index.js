@@ -11,4 +11,6 @@ Menu.belongsTo(Restaurant, {
   onDelete: 'SET NULL'
 });
 
+
+
 module.exports = { User, Restaurant, Menu };
