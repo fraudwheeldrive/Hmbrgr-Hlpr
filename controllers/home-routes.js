@@ -18,4 +18,14 @@ router.get( '/login', (req, res ) => {
 router.get('/newaccount', (req, res) => {
     res.render('newaccount');
 });
+
+router.get('/', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+        }
+
+        res.render('login');
+});
+
 module.exports = router;
