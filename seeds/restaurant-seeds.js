@@ -1,14 +1,31 @@
 //const sequelize = require('../config/connection');
-const { Restaurant } = require('../models')
+const { Restaurant } = require("../models");
 
-//id, Restaurant number, restaurant addresss 
+//id, Restaurant number, restaurant addresss
 
-const Restaurantdata =[
+const restaurantdata = [
+  {
+    Id: 1,
+    location_name: "Toronto",
+    restaurant_address: "123 function rd",
+  },
+  {
+    Id: 2,
+    location_name: "Missisauga",
+    restaurant_address: "456 method crt",
+  },
+  {
+    Id: 3,
+    location_name: "Milton",
+    restaurant_address: "890 Variable Blvd",
+  },
+  {
+    Id: 4,
+    location_name: "London",
+    restaurant_address: "246 Array Way",
+  }
+];
 
+const seedLocation = () => Restaurant.bulkCreate(restaurantdata);
 
-
-]
-
-const seedRestaurants = () => Comment.bulkCreate(Reustaurantdata);
-
-module.exports = seedRestaurant;
+module.exports = seedLocation;
