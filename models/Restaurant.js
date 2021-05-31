@@ -2,9 +2,9 @@ const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection.js');
 
-class Location extends Model {}
+class Restaurant extends Model {}
 
-Category.init(
+Restaurant.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -12,9 +12,20 @@ Category.init(
       primaryKey: true,
       autoIncrement: true
     }, 
-    location_name: {
-      type: DataTypes.STRING,
+    restaurant_number: {
+      type: DataTypes.INTEGER,
       allowNull: false
+    },
+    address: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id'
+      }
     }
   },
   {
@@ -22,8 +33,8 @@ Category.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'location',
+    modelName: 'restaurant',
   }
 );
 
-module.exports = Location;
+module.exports = Restaurant;

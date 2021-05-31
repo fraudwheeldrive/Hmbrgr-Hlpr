@@ -1,4 +1,5 @@
 const express = require( 'express' );
+const sequelize = require('./config/connection');
 const routes = require( './controllers/' );
 const path = require( 'path' );
 const exphbs = require( 'express-handlebars' );
@@ -11,4 +12,11 @@ app.use( express.static( path.join( __dirname, 'public' ) ) );
 app.engine( 'handlebars', hbs.engine );
 app.set( 'view engine', 'handlebars' );
 app.use( routes );
-app.listen( PORT, () => console.log( 'Now listening' ) );
+
+
+// sync sequelize models to the database, then turn on the server
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => {
+    console.log(`App listening on port ${PORT}!`);
+  });  
+});

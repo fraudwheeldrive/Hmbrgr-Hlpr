@@ -1,30 +1,14 @@
-// import models
+const User = require('./User');
+const Menu = require('./Menu');
+const Restaurant = require('./Restaurant')
 
-const Product = require('./Location');
-const Category = require('./Menu');
+User.hasMany(Restaurant, {
+  foreignKey: 'user_id'
+});
 
+Menu.belongsTo(Restaurant, {
+  foreignKey: 'location',
+  onDelete: 'SET NULL'
+});
 
-// Products belongsTo Category
-Product.belongsTo(Category, {
-  foreignKey: 'category_id'
-})
-
-// Categories have many Products
-Category.hasMany(Product, {
-  foreignKey: 'category_id'
-})
-
-// Products belongToMany Tags (through ProductTag)
-Product.belongsToMany(Tag, {
-  through: ProductTag,
-  as: "product_tag_id",
-  foreignKey: "product_id"
-})
-
-
-
-module.exports = {
-  Location,
-  Menu,
-  
-};
+module.exports = { User, Restaurant, Menu };
