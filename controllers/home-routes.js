@@ -5,8 +5,8 @@ router.get( '/', (req, res ) => {
 router.get( '/contact', (req, res ) => {
     res.render( 'contact' )
 } );
-router.get( '/location', (req, res ) => {
-    res.render( 'locations' )
+router.get( '/restaurants', (req, res ) => {
+    res.render( 'restaurants' )
 } );
 router.get( '/menu', (req, res ) => {
     res.render( 'menu' )
@@ -14,4 +14,6 @@ router.get( '/menu', (req, res ) => {
 router.get( '/login', (req, res ) => {
     res.render( 'login' )
 } );
+
+
 module.exports = router;
