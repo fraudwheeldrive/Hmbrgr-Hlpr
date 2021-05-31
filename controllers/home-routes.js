@@ -14,4 +14,8 @@ router.get( '/menu', (req, res ) => {
 router.get( '/login', (req, res ) => {
     res.render( 'login' )
 } );
+
+router.get('/newaccount', (req, res) => {
+    res.render('newaccount');
+});
 module.exports = router;
