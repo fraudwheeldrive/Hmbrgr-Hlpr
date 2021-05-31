@@ -23,7 +23,7 @@ const restaurantdata = [
     Id: 4,
     location_name: "London",
     restaurant_address: "246 Array Way",
-  },
+  }
 ];
 
 const seedLocation = () => Restaurant.bulkCreate(restaurantdata);

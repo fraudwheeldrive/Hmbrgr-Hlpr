@@ -70,7 +70,7 @@ const menudata = [
     product_name: "iceCream",
     ingredients: "vanilla flavored soft serve with spoon",
     price: 3.49,
-  },
+  }
 ];
 
 const seedMenu = () => Menu.bulkCreate(menudata);
