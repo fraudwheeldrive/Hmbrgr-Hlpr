@@ -3,26 +3,37 @@ const { Restaurant } = require("../models");
 
 //id, Restaurant number, restaurant addresss
 
+//id
+//restaurant_number:
+//address
+//user_id 
+
 const restaurantdata = [
   {
     Id: 1,
-    location_name: "Toronto",
-    restaurant_address: "123 function rd",
+    restaurant_number: 4,
+    address: "123 function rd, Toronto Ontario",
+    user_id: 1
   },
   {
     Id: 2,
-    location_name: "Missisauga",
-    restaurant_address: "456 method crt",
+    restaurant_number: 4,
+    address: "456 method crt, Milton Ontario",
+    user_id: 1
+
   },
   {
     Id: 3,
-    location_name: "Milton",
-    restaurant_address: "890 Variable Blvd",
+    restaurant_number: 4,
+    address: "890 Variable Blvd, London Ontario",
+    user_id: 1 
   },
   {
     Id: 4,
-    location_name: "London",
-    restaurant_address: "246 Array Way",
+    restaurant_number: 4,
+    address: "246 Array Way, Missisauga Ontario",
+    user_id: 1
+    
   }
 ];
 
