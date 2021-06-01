@@ -9,12 +9,30 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>  
-        <link rel="stylesheet" href="/stylesheets/style.css">
+        <link rel="stylesheet" href="stylesheets/style.css">
         
-        <title>Hmbrgr-Hlpr</title>
+        <title>SUPER-HIP</title>
     </head>
-
     <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px- sticky-top p-3">
+        <a class="navbar-brand p-2" href="/">SUPER-HIP</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav ml-auto ">
+            <li class="nav-item pl-2">
+                <a class="nav-link" href="/contact">CONTACT</a>
+              </li>
+            <li class="nav-item pl-2">
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">LOCATION</a>
+                    <div class="dropdown-menu">
+                        <a href="/location" class="dropdown-item">Toronto</a>
+                        <a href="/location" class="dropdown-item">Mississauga</a>
+                        <a href="/location" class="dropdown-item">Milton</a>
+                        <a href="/location" class="dropdown-item">London</a>
+
         <header>
             <h1 class="title">
                 <a href="/">SUPER-HIP </a>
@@ -33,14 +51,23 @@
                         {{/if}} 
                     </div>
                 </div>
-            </nav>
-        </header>        
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0 pl-2">
+            <button type="button" class="btn btn-outline-secondary"><a href="/login">LOGIN</a></button>
+          </form>
+        </div>
+      </nav>
 
-       {{{body}}} 
 
-        <footer class="foot">
-            <h5>&copy;2021 Project 8 Team Ltd. All rights reserved</h5>
-        </footer>
+      <footer class="bg-light text-center text-lg-start fixed-bottom">
+        <div class="text-center">
+          <h6>&copy;2021 Project 8 Team Ltd. All rights reserved</h6>
+        </div>
+
+      </footer>
+
+      {{{body}}} 
 
         <script>
             $(document).ready(function(){
