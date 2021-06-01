@@ -12,7 +12,7 @@ const menudata = [
   {
     id: 1,
     description: "hamBurger",
-    ingredients: "1 beef patty,ketchup, mmustard, onions, pickles",
+    ingredients: "1 beef patty,ketchup, mustard, onions, pickles",
     price: 2.49,
     location: 1
   },
