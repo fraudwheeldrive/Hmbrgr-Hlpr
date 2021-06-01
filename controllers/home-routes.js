@@ -1,31 +1,39 @@
-const router = require( 'express' ).Router();
+const router = require('express').Router();
+const sequelize = require('../config/connection');
+const { Restaurant, Menu, User } = require('../models');
+
 router.get( '/', (req, res ) => {
     res.render( 'homepage' )
-} );
+});
+
 router.get( '/contact', (req, res ) => {
     res.render( 'contact' )
-} );
-router.get( '/restaurants', (req, res ) => {
-    res.render( 'restaurants' )
-} );
-router.get( '/menu', (req, res ) => {
-    res.render( 'menu' )
-} );
-router.get( '/login', (req, res ) => {
-    res.render( 'login' )
-} );
+});
 
 router.get('/newaccount', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/dashboard');
+        return;
+      }
     res.render('newaccount');
 });
 
 router.get('/', (req, res) => {
-    if (req.session.loggedIn) {
-        res.redirect('/');
-        return;
-        }
+	if (req.session.loggedIn) {
+		res.redirect('/');
+		return;
+		}
 
-        res.render('login');
+	res.render('login');
 });
+
+router.get( '/login', (req, res ) => {
+    if (req.session.loggedIn) {
+        res.redirect('/dashboard');
+        return;
+      }
+    res.render( 'login' )
+  });
+  
 
 module.exports = router;

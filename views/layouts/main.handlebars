@@ -23,20 +23,14 @@
                         
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav">
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">LOCATION</a>
-                            <div class="dropdown-menu">
-                                <a href="/location" class="dropdown-item">Toronto</a>
-                                <a href="/location" class="dropdown-item">Mississauga</a>
-                                <a href="/location" class="dropdown-item">Milton</a>
-                                <a href="/location" class="dropdown-item">London</a>
-
-                            </div>
                         </div>
-                        <a href="/menu" class="nav-item nav-link active">MENU</a>
-                        <a href="/contact" class="nav-item nav-link">CONTACT</a>
+                        <a href="/dashboard" class="nav-item nav-link active">MENUS</a>
+                        <a href="/contact" class="nav-item nav-link">CONTACT</a>     
+                        {{#if loggedIn}}
+                        <button id="logout" class="btn-no-style">LOGOUT</button> 
+                        {{else}}
                         <a href="/login" class="nav-item nav-link">LOGIN</a>
-                        <button id="logout" class="btn-no-style">logout</button>  
+                        {{/if}} 
                     </div>
                 </div>
             </nav>

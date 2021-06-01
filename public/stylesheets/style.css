@@ -204,6 +204,14 @@ main nav ul li a {
     
 }
 
+.btn-no-style {
+    background: none;
+    border: none;
+    color: rgb(148, 132, 30);
+    font-size: 30px;
+    font-weight: lighter;
+}
+
 @media screen and (min-width: 768px){
     header h1 {        
         font-weight: lighter;
