@@ -1,18 +1,37 @@
 const router = require('express').Router();
-const { Menu, Restaurant } = require('../../models');
+const { UniqueConstraintError } = require('sequelize/types');
+const { Menu, Restaurant, User } = require('../../models');
+const { sequelize } = require('../../models/User');
 
 //Menu get all
 router.get('/', (req, res) => {
   Menu.findAll({
+    attributes: [
+      'id' ,
+      'description',
+      'ingredients',
+      'price',
+    ],
     include: [
       // include the Restaurant location here:
       {
         model: Restaurant,
         attributes: ['id', 'restaurant_number', 'address'],
-      }
-    ]
-  })
-  .then(dbMenuData => res.json(dbMenuData))
+        include: { 
+          model: User,
+          attributes: ['username']
+        }
+      },
+  {
+    model: User,
+    attributes: ['username']
+   }
+ ]
+})
+  .then(dbMenuData => {
+  res.rended('menu', dbMenuData[0]);
+})
+
   .catch(err => {
     console.log(err);
     res.status(500).json(err);
