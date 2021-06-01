@@ -33,14 +33,52 @@ router.get("/menu", (req, res) => {
   })
     .then((dbMenuData) => {
       // pass a single post object into the homepage template
-      const menuItems =dbMenuData.map(menu => menu.get({ plain: true }));
-      res.render("menu", {menuItems });
+      const menuItems = dbMenuData.map((menu) => menu.get({ plain: true }));
+      res.render("menu", { menuItems });
     })
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);
     });
 });
+
+router.get("/menu/ :id", (req, res) => {
+  Menu.findOne({
+    where: {
+      id: req.params.id,
+    },
+    attributes: ["id", "description", "ingredients", "price", "location"],
+
+    //   include: [
+    //     {
+    //       model: Restaurant,
+    //       attributes: ['id', 'restaurant_number', 'address', 'user_id'],
+    //       include: {
+    //         model: User,
+    //         attributes: ['username']
+    //       }
+    //     },
+    //     {
+    //       model: User,
+    //       attributes: ['username']
+    //     }
+    //   ]
+  })
+    .then((dbMenuData) => {
+        if (!dbPostData) {
+            res.status(404).json ({ message: 'no Menu Item found with this id'})
+            return;
+        }
+  
+      const singleMenu = dbMenuData.get({ plain: true });
+      res.render('single-menu' , {singleMenu });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
 router.get("/login", (req, res) => {
   res.render("login");
 });
