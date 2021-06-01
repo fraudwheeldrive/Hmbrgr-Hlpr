@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<section class="background">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>  
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        
+        <title>Hmbrgr-Hlpr</title>
+    </head>
+
+    <body>
+        <header>
+            <h1 class="title">
+                <a href="/">SUPER-HIP </a>
+            </h1>
+            <nav class="navbar navbar-expand-sm">
+                        
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">LOCATION</a>
+                            <div class="dropdown-menu">
+                                <a href="/location" class="dropdown-item">Toronto</a>
+                                <a href="/location" class="dropdown-item">Mississauga</a>
+                                <a href="/location" class="dropdown-item">Milton</a>
+                                <a href="/location" class="dropdown-item">London</a>
+
+                            </div>
+                        </div>
+                        <a href="/menu" class="nav-item nav-link active">MENU</a>
+                        <a href="/contact" class="nav-item nav-link">CONTACT</a>
+                        <a href="/login" class="nav-item nav-link">LOGIN</a>
+                        <button id="logout" class="btn-no-style">logout</button>  
+                    </div>
+                </div>
+            </nav>
+        </header>        
+
+       {{{body}}} 
+
+        <footer class="foot">
+            <h5>&copy;2021 Project 8 Team Ltd. All rights reserved</h5>
+        </footer>
+
+        <script>
+            $(document).ready(function(){
+                $(".dropdown").hover(function(){
+                    var dropdownMenu = $(this).children(".dropdown-menu");
+                    if(dropdownMenu.is(":visible")){
+                        dropdownMenu.parent().toggleClass("open");
+                    }
+                });
+            });     
+
+        </script>
+
+        <script src="/javascript/logout.js"></script>  
+    </body>
+</section>
+
+</html>

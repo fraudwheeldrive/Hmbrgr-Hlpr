@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ body {
+
+    color: grey;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+.dropdown-menu{
+    margin-top: 0;
+}
+
+
+.background {
+/* The image used */
+background-image: url("../images/AdobeStock_127928024.jpeg");
+
+/* Set a specific height */
+min-height: 1500px;
+
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-blend-mode: color-burn;
+/* apply styles to <header> */
+
+}
+
+header {
+    padding: 90px 175px 40px;
+    background-color: rgb(19, 18, 18);
+    display: flex;
+    justify-content: space-between;
+    opacity: 80%;
+   
+    
+}
+
+header h1 {
+
+    padding: 0px 20px 45px;
+    font-weight: bold;
+    font-size: 40px;
+    /* color: brown; */
+    display: inline;
+}
+
+header a {
+    text-decoration: none;
+    color: rgb(148, 132, 30);
+}
+
+header nav {
+    display: flex;
+    margin: 7px 0;
+}
+
+header nav ul li {
+    display: inline;
+    
+}
+
+header nav a {   
+    margin: 0 40px;
+    font-weight: lighter;
+    font-size: 30px;
+    
+}
+
+.login{
+
+    padding: 30px 0px 20px;
+    background-color: black;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    
+}
+    
+
+.start{
+    position: absolute;    
+    width: 30%;
+    height: 0%;    
+    font-weight: lighter;   
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(216, 209, 147);
+    top: 360px;
+    left: 90PX;   
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+}
+.welcome-form {
+    position: absolute;
+    font-weight: lighter;
+    width: 30%;
+    height: 24%;
+    overflow: hidden;
+    background-color: rgb(20, 20, 20);
+    opacity: 60%;    
+    padding: 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(216, 209, 147);
+    top: 430px;
+    left: 90PX;   
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 10px;
+} 
+
+main {
+    display: flex;
+    justify-content: left;
+    position: absolute;
+    background-color: rgb(163, 156, 108);
+    width: 100%;
+    opacity: 60%;
+    padding: 50px;   
+    text-align: left;
+    font-size: 20px;
+    /* color: rgb(7, 7, 7); */
+    top: 1100px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    
+}
+
+main h2 {
+
+    padding: 0px 90px 80px;
+    font-weight: bold;
+    font-size: 30px;
+    color: black;
+    display: inline;
+    
+}
+main a {
+    text-decoration: none;
+    color: black;
+}
+
+
+main nav {
+    display: flex;
+    margin: 7px 0px;
+}
+
+main nav ul li {
+    display: inline;
+    
+}
+
+main nav ul li a {   
+    margin: 0px 40px;
+    font-weight: lighter;
+    font-size: 40px;
+    
+}
+
+/* contact page style  */
+.display-4 {
+    font-family: Helvetica, Arial, sans-serif;
+}
+.btn-primary {
+    
+    background-color: rgb(63, 56, 7);
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 25px;
+}
+.background-contact{
+    width: 80%;
+    margin: 10px 270px 0px;
+
+}
+.foot{
+    position: absolute;
+    font-weight: lighter;
+    width: 100%;
+    height: 5%;
+    overflow: hidden;
+    background-color: black;
+    opacity: 50%;    
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+    color: rgb(218, 194, 45);
+    top: 1420px;
+    display: flex;
+    justify-content: center;  
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+    
+}
+
+@media screen and (min-width: 768px){
+    header h1 {        
+        font-weight: lighter;
+        font-size: 120px;       
+       
+    }
+    .foot{
+        
+        background-color: rgb(2, 2, 2);    
+               
+        font-size: 80px;        
+        
+    }
+}
