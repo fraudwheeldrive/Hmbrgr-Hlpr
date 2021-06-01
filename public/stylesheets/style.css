@@ -178,8 +178,11 @@ main nav ul li a {
     padding: 10px 20px;
     font-size: 25px;
 }
+.background-contact{
+    width: 80%;
+    margin: 10px 270px 0px;
 
-
+}
 .foot{
     position: absolute;
     font-weight: lighter;
@@ -193,7 +196,7 @@ main nav ul li a {
     text-decoration: none;
     font-size: 30px;
     color: rgb(218, 194, 45);
-    top: 1300px;
+    top: 1420px;
     display: flex;
     justify-content: center;  
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
