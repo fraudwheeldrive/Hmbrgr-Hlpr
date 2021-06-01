@@ -1,3 +1,6 @@
+const router = require('express').Router();
+
+
 // POST /api/contact
 router.post('/', (req, res) => {
     Contact.create({
@@ -11,3 +14,5 @@ router.post('/', (req, res) => {
       res.status(500).json(err);
     });
   });
+
+module.exports = router;
