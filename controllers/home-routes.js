@@ -7,7 +7,13 @@ router.get( '/', (req, res ) => {
 });
 
 router.get( '/contact', (req, res ) => {
-    res.render( 'contact' )
+  if (req.session.loggedIn) {
+    res.render( 'contact', {
+      loggedIn: true
+    })
+    return;
+  }
+  res.render( 'contact' )
 });
 
 router.get('/newaccount', (req, res) => {
@@ -35,5 +41,6 @@ router.get( '/login', (req, res ) => {
     res.render( 'login' )
   });
   
+
 
 module.exports = router;
