@@ -1,15 +1,15 @@
 const router = require('express').Router();
-const { Restaurant } = require('../../models');
+const { Restaurant, Menu } = require('../../models');
 
 //restaurant get all 
 
 router.get('/', (req, res) => {
   Restaurant.findAll({
 
-    Include: [
+    include: [
       {
-        model: Restaurant,
-        attributes: ['id', 'restaurant_number', 'address'],
+        model: Menu,
+        attributes: ['id', 'description', 'ingredients', 'price', 'location' ]
       }
     ]
   })
@@ -23,14 +23,14 @@ router.get('/', (req, res) => {
 //restaurant by id 
 
 router.get('/:id', (req, res) => {
-  menubar.findOne({
+  Restaurant.findOne({
     where: {
       id: req.params.id
     },
     include: [
       {
-        model: Restaurant,
-        attributes: ['id', 'restaurant_number', 'address'],
+        model: Menu,
+        attributes: ['id', 'description', 'ingredients', 'price' ]
       }
     ]
   })

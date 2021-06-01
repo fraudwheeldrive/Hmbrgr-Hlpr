@@ -33,6 +33,22 @@
                         <a href="/location" class="dropdown-item">Milton</a>
                         <a href="/location" class="dropdown-item">London</a>
 
+        <header>
+            <h1 class="title">
+                <a href="/">SUPER-HIP </a>
+            </h1>
+            <nav class="navbar navbar-expand-sm">
+                        
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        </div>
+                        <a href="/dashboard" class="nav-item nav-link active">DASHBOARD</a>
+                        <a href="/contact" class="nav-item nav-link">CONTACT</a>     
+                        {{#if loggedIn}}
+                        <button id="logout" class="btn-no-style">LOGOUT</button> 
+                        {{else}}
+                        <a href="/login" class="nav-item nav-link">LOGIN</a>
+                        {{/if}} 
                     </div>
                 </div>
             </li>

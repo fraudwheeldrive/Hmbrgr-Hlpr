@@ -11,6 +11,11 @@ Menu.belongsTo(Restaurant, {
   onDelete: 'SET NULL'
 });
 
+Restaurant.hasMany(Menu, {
+  foreignKey: 'location',
+  onDelete: 'SET NULL'
+});
+
 
 
 module.exports = { User, Restaurant, Menu };
