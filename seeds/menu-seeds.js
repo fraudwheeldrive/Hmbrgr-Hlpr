@@ -11,65 +11,75 @@ const { Menu } = require("../models");
 const menudata = [
   {
     id: 1,
-    product_name: "hamBurger",
+    description: "hamBurger",
     ingredients: "1 beef patty,ketchup, mmustard, onions, pickles",
     price: 2.49,
+    location: 1
   },
   {
     id: 2,
-    product_name: "cheeseBurger",
+    description: "cheeseBurger",
     ingredients: " 1 beef patty,ketchup, mmustard, onions, pickles cheese",
     price: 2.89,
+    location: 1
   },
   {
     id: 3,
-    product_name: "grandStan",
+    description: "grandStan",
     ingredients:
       "2 beef patties,special sauce, shredded lettuce, onions, pickles, cheese",
     price: 4.49,
+    location: 1
   },
   {
     id: 4,
-    product_name: "3/4 - 1 lb aka the fraction burger",
+    description: "3/4 - 1 lb aka the fraction burger",
     ingredients: "1 1/4lbs beef patty, ketchup, mmustard, onions, pickles",
     price: 4.49,
+    location: 1
   },
   {
     id: 5,
-    product_name: "improbableBurger",
+    description: "improbableBurger",
     ingredients: "veggy patty, mayo, red onions, pickles, leaf lettuce",
     price: 5.39,
+    location: 1
   },
   {
     id: 6,
-    product_name: "isChicken",
+    description: "isChicken",
     ingredients: "formed chicken patty, mayo, lettuce",
     price: 4.49,
+    location: 1
   },
   {
     id: 7,
-    product_name: "chickenTuggets",
+    description: "chickenTuggets",
     ingredients: " an array [] of 6 deepfried chicken tenders",
     price: 4.79,
+    location: 1
   },
   {
     id: 8,
-    product_name: "functionFries()",
+    description: "functionFries()",
     ingredients: "golden friend potatoes, ligtly salted",
     price: 1.89,
+    location: 1
   },
   {
     id: 9,
-    product_name: "sideSalad",
+    description: "sideSalad",
     ingredients:
       "romain lettuce, iceberg lettuce, spinach, cherry tomatoes, onions",
     price: 2.19,
+    location: 1
   },
   {
     id: 10,
-    product_name: "iceCream",
+    description: "iceCream",
     ingredients: "vanilla flavored soft serve with spoon",
     price: 3.49,
+    location: 1
   }
 ];
 
