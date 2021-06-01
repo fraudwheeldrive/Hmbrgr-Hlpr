@@ -86,6 +86,17 @@ header nav a {
     
 }
     
+.navbar{
+    padding: 90px 175px 40px;
+    background-color: rgb(19, 18, 18);
+    display: flex;
+    justify-content: space-between;
+    opacity: 80%;
+}
+.navbar:hover{
+    opacity: 95%;
+    background-color: rgb(3, 3, 3);
+}
 
 .start{
     position: absolute;    
@@ -202,6 +213,12 @@ main nav ul li a {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     
     
+}
+
+footer div{
+    background-color: rgba(3, 3, 3, 0.781);
+    color: aliceblue;
+
 }
 
 @media screen and (min-width: 768px){
