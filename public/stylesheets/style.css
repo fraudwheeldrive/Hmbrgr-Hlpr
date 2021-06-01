@@ -212,6 +212,20 @@ main nav ul li a {
     font-weight: lighter;
 }
 
+.dash-link {
+    text-transform: uppercase;
+    font-size: 30px;
+    padding: 10px;
+    background-color:rgb(148, 132, 30);
+    margin: 20px;
+    color: white;
+}
+
+.dash-cont {
+    margin-top: 50px;
+}
+
+
 @media screen and (min-width: 768px){
     header h1 {        
         font-weight: lighter;
