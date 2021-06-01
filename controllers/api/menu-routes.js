@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const { UniqueConstraintError } = require('sequelize/types');
 const { Menu, Restaurant, User } = require('../../models');
 const { sequelize } = require('../../models/User');
 
@@ -17,19 +16,11 @@ router.get('/', (req, res) => {
       {
         model: Restaurant,
         attributes: ['id', 'restaurant_number', 'address'],
-        include: { 
-          model: User,
-          attributes: ['username']
         }
-      },
-  {
-    model: User,
-    attributes: ['username']
-   }
  ]
 })
   .then(dbMenuData => {
-  res.rended('menu', dbMenuData[0]);
+  res.render('menu', dbMenuData[0]);
 })
 
   .catch(err => {
