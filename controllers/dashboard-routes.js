@@ -39,4 +39,23 @@ router.get( '/close-location', (req, res ) => {
 	});
 });
 
+router.get( '/edit', (req, res ) => {
+	res.render('edit-menu', {
+		loggedIn: true
+	});
+});
+
+router.get( '/single-location-menu', (req, res ) => {
+	res.render('single-location-menu', {
+		loggedIn: true
+	});
+});
+
+router.get( '/confirm-closing', (req, res ) => {
+	res.render('closelocationconfirm', {
+		loggedIn: true
+	});
+});
+
+
 module.exports = router;
