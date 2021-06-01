@@ -10,7 +10,7 @@ The system is protected with encrypted user passwords so only authorized user ca
 Additional store can be registered to the system as the restaurant chain expand.
 
 > **Benefit to implement Hmbrgr-Hlpr CMS**
->- [x] Reduce inconsistency of menu and prices across restaurants
+>- [x] Reduce inconsistency of item recipe and prices across restaurants
 >   * Restaurants will pull their set menu from the same data base
 >   * Standardized discount and promotion during special event and promotion discount
 >- [x] Reduce human error 
@@ -23,7 +23,7 @@ Additional store can be registered to the system as the restaurant chain expand.
 
 ## User Story 
 As an owner of a chain of quick-service restaurants,  
-I would like to have an application that allows me to update our standardized menu items and prices in an efficient and timely manner.  
+I would like to have an application that allows me to update our standardized menu recipes and prices in an efficient and timely manner.  
 I would also like the ability to add new restaurants as we increase the number of location.  
 Each individual Restaurant Management teams should have their unique login ID to access their restaurant data.  
 The restaurant is able to delete or hide certain menu items on a store level through the application.  
@@ -46,7 +46,7 @@ THEN I am given the options to
 WHEN I click on ` View standard menu items `  
 THEN I am presented the latest version of the full menu  
 WHEN I click on ` Update standard menu items (Main) `  
-THEN I can delete or edit the standard menu list item and price  
+THEN I can delete or edit the standard menu item recipe and price  
 WHEN I click on ` Update store menu items (Store level) `  
 THEN I can only delete menu item  
 WHEN I pressed the ` Save ` button  
