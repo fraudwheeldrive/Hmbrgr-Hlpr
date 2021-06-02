@@ -296,6 +296,10 @@ footer div{
   font-weight: bold;
 }
 
+.confirm-close {
+    font-weight: bolder;
+}
+
 
 
 @media screen and (min-width: 768px){
