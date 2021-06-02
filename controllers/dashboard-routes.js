@@ -21,11 +21,30 @@ router.get( '/new-menu', (req, res ) => {
 	});
 });
 
-router.get( '/all-menu-items', (req, res ) => {
-	res.render('allmenu', {
-		loggedIn: true
-	});
-});
+router.get("/all-menu-items", (req, res) => {
+    Menu.findAll({
+		// where: {
+		// 	user_id: req.session.user_id
+		// },
+      attributes: ["id", "description", "ingredients", "price", "location"],
+    })
+      .then((dbMenuData) => {
+        // pass a single post object into the homepage template
+        const menu = dbMenuData.map((menu) => menu.get({ plain: true }));
+        res.render("allmenu", { menu });
+      })
+      .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
+
+// router.get( '/all-menu-items', (req, res ) => {
+
+// 	res.render('allmenu', {
+// 		loggedIn: true
+// 	});
+// });
 
 router.get( '/location-menu', (req, res ) => {
 	res.render('locationmenu', {
@@ -56,6 +75,7 @@ router.get( '/confirm-closing', (req, res ) => {
 		loggedIn: true
 	});
 });
+
 
 
 module.exports = router;

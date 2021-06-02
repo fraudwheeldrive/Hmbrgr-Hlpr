@@ -12,14 +12,14 @@ const menudata = [
   {
     id: 1,
     description: "hamBurger",
-    ingredients: "1 beef patty,ketchup, mmustard, onions, pickles",
+    ingredients: "1 beef patty, ketchup, mustard, onions, pickles",
     price: 2.49,
     location: 1
   },
   {
     id: 2,
     description: "cheeseBurger",
-    ingredients: " 1 beef patty,ketchup, mmustard, onions, pickles cheese",
+    ingredients: " 1 beef patty,ketchup, mustard, onions, pickles cheese",
     price: 2.89,
     location: 1
   },
@@ -34,7 +34,7 @@ const menudata = [
   {
     id: 4,
     description: "3/4 - 1 lb aka the fraction burger",
-    ingredients: "1 1/4lbs beef patty, ketchup, mmustard, onions, pickles",
+    ingredients: "1 1/4lbs beef patty, ketchup, mustard, onions, pickles",
     price: 4.49,
     location: 1
   },
@@ -54,7 +54,7 @@ const menudata = [
   },
   {
     id: 7,
-    description: "chickenTuggets",
+    description: "isChickenNuggets",
     ingredients: " an array [] of 6 deepfried chicken tenders",
     price: 4.79,
     location: 1
