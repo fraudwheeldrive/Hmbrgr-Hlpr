@@ -86,8 +86,8 @@ router.put('/:id' , (req, res) => {
   });
 });
 
-// //delete a Restaurant
-router.delete('/:id ', (req, res) => {
+//delete a Restaurant
+router.delete('/:id', (req, res) => {
   Restaurant.destroy({
     where: {
       id:req.params.id

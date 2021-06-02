@@ -17,30 +17,20 @@ router.get( '/contact', (req, res ) => {
 });
 
 router.get('/newaccount', (req, res) => {
-    if (req.session.loggedIn) {
-        res.redirect('/dashboard');
-        return;
-      }
-    res.render('newaccount');
-});
-
-router.get('/', (req, res) => {
-	if (req.session.loggedIn) {
-		res.redirect('/');
-		return;
-		}
-
-	res.render('login');
+  if (req.session.loggedIn) {
+      res.redirect('/dashboard');
+      return;
+    }
+  res.render('newaccount');
 });
 
 router.get( '/login', (req, res ) => {
-    if (req.session.loggedIn) {
-        res.redirect('/dashboard');
-        return;
-      }
-    res.render( 'login' )
-  });
-  
+  if (req.session.loggedIn) {
+      res.redirect('/dashboard');
+      return;
+    }
+  res.render( 'login' )
+});
 
 
 module.exports = router;
