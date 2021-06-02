@@ -47,8 +47,22 @@ router.get("/all-menu-items", (req, res) => {
 // });
 
 router.get( '/location-menu', (req, res ) => {
-	res.render('locationmenu', {
-		loggedIn: true
+  Restaurant.findAll({
+    include: [
+      {
+        model: Menu,
+        attributes: ['id', 'description', 'ingredients', 'price', 'location' ]
+      }
+    ]
+  })
+	.then(dbRestaurantData => {
+		// pass a single post object into the homepage template
+		const restaurants = dbRestaurantData.map(restaurant => restaurant.get({ plain: true }));
+		res.render('locationmenu', { restaurants, loggedIn: true });
+	})
+	.catch(err => {
+		console.log(err);
+		res.status(500).json(err);
 	});
 });
 
@@ -58,10 +72,20 @@ router.get( '/edit', (req, res ) => {
 	});
 });
 
-router.get( '/single-location-menu', (req, res ) => {
-	res.render('single-location-menu', {
-		loggedIn: true
-	});
+router.get( '/single-location-menu/:id', (req, res ) => {
+  Menu.findAll({
+    where: {
+      location: req.params.id
+    }
+  })
+  .then((dbMenuData) => {
+    const menu = dbMenuData.map((menu) => menu.get({ plain: true }));
+    res.render("single-location-menu", { menu, loggedIn: true });
+  })
+  .catch((err) => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
 router.get( '/close-location', (req, res ) => {
@@ -84,6 +108,7 @@ router.get( '/close-location', (req, res ) => {
 	});
 });
 
+
 router.get('/confirm-closing/:id', (req, res) => {
   Restaurant.findOne({
     where: {
@@ -95,6 +120,7 @@ router.get('/confirm-closing/:id', (req, res) => {
   }).then(dbRestaurantData => {
     const restaurant = dbRestaurantData.get({ plain: true });
 
+    console.log(restaurant)
     res.render('closelocationconfirm', {
 		restaurant,
     loggedIn: true

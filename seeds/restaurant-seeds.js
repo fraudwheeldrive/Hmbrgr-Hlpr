@@ -19,6 +19,7 @@ const restaurantdata = [
   },
   {
     Id: 2,
+
     city:"Milton",
     address: "456 method crt, Milton Ontario",
     phone: '905-614-1641',
@@ -28,8 +29,11 @@ const restaurantdata = [
   },
   {
     Id: 3,
+
     city:"London",
     address: "890 Variable Blvd, London Ontario",
+
+    
     phone: '514-614-1641',
     email: 'Teamlead@hmbrgr.com',
     user_id: 1 

@@ -75,8 +75,11 @@ router.get('/:id', (req, res) => {
 // add a restaurant
 router.post('/', (req, res) => {
   Restaurant.create({
+    city: req.body.city,
     address: req.body.address,
-    city: req.body.city
+    phone: req.body.phone,
+    email: req.body.email,
+    user_id: req.body.user_id
   })
   .then(dbRestaurantData => res.json(dbRestaurantData))
   .catch(err => {
