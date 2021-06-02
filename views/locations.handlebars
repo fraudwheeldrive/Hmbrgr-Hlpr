@@ -1,4 +1,18 @@
-<h1>{{location.id}}</h1>
-<h1>{{location.city}}</h1>
-<h1>{{location.address}}</h1>
-<h1>{{location.restaurant_number}}</h1>
+<h3 class="page-title"> Locations</h3>
+<ol class="page-list">
+  {{#each restaurant as |restaurant|}}
+  <li>
+    <article class="page">
+      <div class="title">
+        <span>Location :{{city}}</span>
+      </div>
+      <div class="meta">
+        Restaurant Number {{id }} 
+        Address: {{address}} 
+        Phone Number: {{phone}}
+        Email: {{email}}
+</div>
+    </article>
+  </li>
+  {{/each}}
+</ol>
