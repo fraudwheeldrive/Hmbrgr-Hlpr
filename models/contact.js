@@ -66,4 +66,4 @@ Contact.init(
   }
 );
 
-module.exports = contact;
+module.exports = Contact;
