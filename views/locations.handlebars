@@ -1,0 +1,17 @@
+<ol class="restaurant-list">
+  {{#each restaurant as |restaurant|}}
+  <li>
+    <article class="location">
+      <div class="title">
+        <span>Location :{{city}}</span>
+      </div>
+      <div class="meta">
+        Restaurant Number {{ restaurant_number }} 
+        Address: {{address}} 
+        Phone Number: {{phone}}
+        Email: {{email}}
+</div>
+    </article>
+  </li>
+  {{/each}}
+</ol>

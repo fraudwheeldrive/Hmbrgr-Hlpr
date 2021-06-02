@@ -23,7 +23,7 @@
 background-image: url("../images/AdobeStock_127928024.jpeg");
 
 /* Set a specific height */
-min-height: 1500px;
+min-height: 1200px;
 
 /* Create the parallax scrolling effect */
 background-attachment: fixed;
@@ -36,7 +36,7 @@ background-blend-mode: color-burn;
 }
 
 header {
-    padding: 90px 175px 40px;
+    padding: 20px 175px 40px;
     background-color: rgb(19, 18, 18);
     display: flex;
     justify-content: space-between;
@@ -47,7 +47,7 @@ header {
 
 header h1 {
 
-    padding: 0px 20px 45px;
+    padding: 30px 20px 45px;
     font-weight: bold;
     font-size: 40px;
     /* color: brown; */
@@ -86,6 +86,17 @@ header nav a {
     
 }
     
+.navbar{
+    /* padding: 5px 5px 5px; */
+    background-color: rgb(19, 18, 18);
+    display: flex;
+    justify-content: space-between;
+    opacity: 80%;
+}
+.navbar:hover{
+    opacity: 60%;
+    background-color: rgb(3, 3, 3);
+}
 
 .start{
     position: absolute;    
@@ -96,7 +107,7 @@ header nav a {
     text-decoration: none;
     font-size: 20px;
     color: rgb(216, 209, 147);
-    top: 360px;
+    top: 150px;
     left: 90PX;   
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
 }
@@ -104,7 +115,7 @@ header nav a {
     position: absolute;
     font-weight: lighter;
     width: 30%;
-    height: 24%;
+    height: 46%;
     overflow: hidden;
     background-color: rgb(20, 20, 20);
     opacity: 60%;    
@@ -113,11 +124,12 @@ header nav a {
     text-decoration: none;
     font-size: 20px;
     color: rgb(216, 209, 147);
-    top: 430px;
+    top: 230px;
     left: 90PX;   
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     border-radius: 10px;
 } 
+
 
 main {
     display: flex;
@@ -130,7 +142,7 @@ main {
     text-align: left;
     font-size: 20px;
     /* color: rgb(7, 7, 7); */
-    top: 1100px;
+    top: 750px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
     
 }
@@ -167,22 +179,33 @@ main nav ul li a {
     
 }
 
+.signup-form{
+    width: 70%;
+    margin: 10px 270px 0px;     
+    
+
+}
 /* contact page style  */
 .display-4 {
     font-family: Helvetica, Arial, sans-serif;
 }
+
 .btn-primary {
-    
     background-color: rgb(63, 56, 7);
     border-radius: 10px;
     padding: 10px 20px;
-    font-size: 25px;
+    font-size: 20px;
 }
-.background-contact{
+.background-contact {
     width: 80%;
     margin: 10px 270px 0px;
-
-}
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
 .foot{
     position: absolute;
     font-weight: lighter;
@@ -203,6 +226,51 @@ main nav ul li a {
     
     
 }
+
+footer div{
+    background-color: rgba(3, 3, 3, 0.781);
+    color: aliceblue;
+
+}
+
+.btn-no-style {
+    background: none;
+    border: none;
+    color: rgb(148, 132, 30);
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+.dash-link {
+    text-transform: uppercase;
+    font-size: 30px;
+    padding: 10px;
+    background-color:rgb(148, 132, 30);
+    margin: 20px;
+    color: white;
+}
+
+.dash-cont {
+    margin-top: 50px;
+}
+
+.col-form-label {
+    color: white;
+    padding: 10px;
+    border-radius: 14px;
+    margin-bottom: 10px;
+}
+
+.new-form {
+    margin-top: 50px;
+}
+
+.new-form-style {
+    background-color:rgb(158, 146, 70);
+    border-radius: 25px;
+    padding: 40px;
+}
+
 
 @media screen and (min-width: 768px){
     header h1 {        

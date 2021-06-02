@@ -1,6 +1,7 @@
 const User = require('./User');
 const Restaurant = require('./Restaurant');
 const Menu = require('./Menu');
+const Contact = require('./Contact')
 
 User.hasMany(Restaurant, {
   foreignKey: 'user_id'
@@ -11,6 +12,11 @@ Menu.belongsTo(Restaurant, {
   onDelete: 'SET NULL'
 });
 
+Restaurant.hasMany(Menu, {
+  foreignKey: 'location',
+  onDelete: 'SET NULL'
+});
 
 
-module.exports = { User, Restaurant, Menu };
+
+module.exports = { User, Restaurant, Menu, Contact };
