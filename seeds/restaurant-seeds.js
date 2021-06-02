@@ -10,27 +10,36 @@ const { Restaurant } = require("../models");
 
 const restaurantdata = [
   {
-    restaurant_number: '123-456-789',
-    city: "Toronto",
-    address: "123 function rd, Toronto Ontario",
+    Id: 1,
+    city:"Toronto Ontario",
+    address: "123 function rd",
+    phone: '416-614-1641' ,
+    email: "owner@hmbrgr.com",
     user_id: 1
   },
   {
-    restaurant_number: '128-477-7809',
-    city: "Milton",
+    Id: 2,
+    city:"Milton Ontario",
     address: "456 method crt, Milton Ontario",
+    phone: '905-614-1641',
+    email: 'manager@hmbrgr.com',
     user_id: 1
+
   },
   {
-    restaurant_number: '173-486-7909',
-    city: "London",
+    Id: 3,
+    city:"London Ontario",
     address: "890 Variable Blvd, London Ontario",
+    phone: '514-614-1641',
+    email: 'Teamlead@hmbrgr.com',
     user_id: 1 
   },
   {
-    restaurant_number: '122-486-789',
-    city: "Missisauga",
-    address: "246 Array Way, Missisauga Ontario",
+    Id: 4,
+    city:"Mississauga Ontario",
+    address: "246 Array Way",
+    phone: '905-509-1641',
+    email: 'socialmedia@hmbrgr.com',
     user_id: 1
   }
 ];
