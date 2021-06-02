@@ -14,14 +14,14 @@ const menudata = [
     description: "hamBurger",
     ingredients: "1 beef patty, ketchup, mustard, onions, pickles",
     price: 2.49,
-    location: 1
+    location: 2
   },
   {
     id: 2,
     description: "cheeseBurger",
     ingredients: " 1 beef patty,ketchup, mustard, onions, pickles cheese",
     price: 2.89,
-    location: 1
+    location: 2
   },
   {
     id: 3,
@@ -36,14 +36,14 @@ const menudata = [
     description: "3/4 - 1 lb aka the fraction burger",
     ingredients: "1 1/4lbs beef patty, ketchup, mustard, onions, pickles",
     price: 4.49,
-    location: 1
+    location: 3
   },
   {
     id: 5,
     description: "improbableBurger",
     ingredients: "veggy patty, mayo, red onions, pickles, leaf lettuce",
     price: 5.39,
-    location: 1
+    location: 3
   },
   {
     id: 6,
@@ -57,14 +57,14 @@ const menudata = [
     description: "isChickenNuggets",
     ingredients: " an array [] of 6 deepfried chicken tenders",
     price: 4.79,
-    location: 1
+    location: 2
   },
   {
     id: 8,
     description: "functionFries()",
     ingredients: "golden friend potatoes, ligtly salted",
     price: 1.89,
-    location: 1
+    location: 2
   },
   {
     id: 9,
@@ -72,14 +72,14 @@ const menudata = [
     ingredients:
       "romain lettuce, iceberg lettuce, spinach, cherry tomatoes, onions",
     price: 2.19,
-    location: 1
+    location: 4
   },
   {
     id: 10,
     description: "iceCream",
     ingredients: "vanilla flavored soft serve with spoon",
     price: 3.49,
-    location: 1
+    location: 4
   }
 ];
 
