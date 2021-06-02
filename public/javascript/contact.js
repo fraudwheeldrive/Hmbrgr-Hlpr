@@ -33,7 +33,7 @@ function signupFormHandler(event) {
     })
     .then((response) => response.json())
     .then(json => console.log( json ))
-    .then(formContainer.innerHTML = '<h1> Successfully Submitted</h1>')
+    .then(formContainer.innerHTML = '<h1> Thank you very much for your submittion! We will contact you shortly</h1>')
     .then(window.scrollTo({ top: 0, behavior: 'smooth' }))
   }
 }
