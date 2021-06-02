@@ -13,52 +13,44 @@
         
         <title>Hmbrgr-Hlpr</title>
     </head>
-
     <body>
-        <header>
-            <h1 class="title">
-                <a href="/">SUPER-HIP </a>
-            </h1>
-            <nav class="navbar navbar-expand-sm">
-                        
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav">
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">LOCATION</a>
-                            <div class="dropdown-menu">
-                                <a href="/location" class="dropdown-item">Toronto</a>
-                                <a href="/location" class="dropdown-item">Mississauga</a>
-                                <a href="/location" class="dropdown-item">Milton</a>
-                                <a href="/location" class="dropdown-item">London</a>
-
-                            </div>
-                        </div>
-                        <a href="/menu" class="nav-item nav-link active">MENU</a>
-                        <a href="/contact" class="nav-item nav-link">CONTACT</a>
-                        <a href="/login" class="nav-item nav-link">LOGIN</a>
-                        <button id="logout" class="btn-no-style">logout</button>  
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px- sticky-top p-3">
+        <a class="navbar-brand p-2" href="/">SUPER-HIP</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav ml-auto pl-2 ">
+            <a href="/dashboard" class="nav-item nav-link active">DASHBOARD</a>
+            <a href="/contact" class="nav-item nav-link">CONTACT</a>     
+                <div class="nav-item dropdown">
+                    <div class="nav-link dropdown-toggle" data-toggle="dropdown">LOCATION</div>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a href="/location" class="dropdown-item">Toronto</a>
+                        <a href="/location" class="dropdown-item">Mississauga</a>
+                        <a href="/location" class="dropdown-item">Milton</a>
+                        <a href="/location" class="dropdown-item">London</a>
                     </div>
                 </div>
-            </nav>
-        </header>        
+          </ul>
+          <div class="form-inline my-2 my-lg-0 pl-2">
+            {{#if loggedIn}}
+            <button id="logout" class="btn-no-style">LOGOUT</button> 
+            {{else}}
+            <a href="/login" class="nav-item nav-link">LOGIN</a>
+            {{/if}} 
+          </div>
+        </div>
+      </nav>
 
-       {{{body}}} 
+      {{{body}}}
 
-        <footer class="foot">
-            <h5>&copy;2021 Project 8 Team Ltd. All rights reserved</h5>
-        </footer>
-
-        <script>
-            $(document).ready(function(){
-                $(".dropdown").hover(function(){
-                    var dropdownMenu = $(this).children(".dropdown-menu");
-                    if(dropdownMenu.is(":visible")){
-                        dropdownMenu.parent().toggleClass("open");
-                    }
-                });
-            });     
-
-        </script>
+      
+      <footer class="bg-light text-center text-lg-start fixed-bottom">
+        <div class="text-center">
+          <h6>&copy;2021 Project 8 Team Ltd. All rights reserved</h6>
+        </div>
+      </footer>
 
         <script src="/javascript/logout.js"></script>  
     </body>
