@@ -271,6 +271,10 @@ footer div{
     padding: 40px;
 }
 
+.confirm-close {
+    font-weight: bolder;
+}
+
 
 @media screen and (min-width: 768px){
     header h1 {        
