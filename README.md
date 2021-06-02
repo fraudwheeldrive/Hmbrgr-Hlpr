@@ -32,8 +32,8 @@ The restaurant is able to delete or hide certain menu items on a store level thr
 #### **LOGIN PAGE**
 WHEN I launch the app  
 THEN I am presented with a secure login page  
-WHEN I click on the dashboard without logging in 
-THEN I will be directed to ` LOGIN PAGE ` 
+WHEN I click on the dashboard without logging in   
+THEN I will be directed to ` LOGIN PAGE `   
 WHEN I input my email and password  
 THEN I will see a error message or successfully directed to the dashboard
 
@@ -41,18 +41,18 @@ THEN I will see a error message or successfully directed to the dashboard
 WHEN I get to the dashboard  
 THEN I am given the options to  
 ` ADD A MENU ITEM `  
-` VIEW AND UPDATE MENU ITEM `
+` VIEW AND UPDATE MENU ITEM `  
 ` VIEW MENU BY LOCATION `  
-` OPEN / CLSOE A LOCATION `  
+` OPEN / CLSOE A LOCATION `    
 
 
 #### **VIEW AND UPDATE MENU ITEM (Main and Store level)**  
 WHEN I click on ` ADD A MENU ITEM `  
-THEN I can add item to a store menu
-WHEN I click on ` VIEW AND UPDATE MENU ITEM `
+THEN I can add item to a store menu  
+WHEN I click on ` VIEW AND UPDATE MENU ITEM `  
 THEN I am presented the latest version of the full menu  
 WHEN I click on ` VIEW MENU BY LOCATION `  
-THEN I am presented the latest version of a store menu 
+THEN I am presented the latest version of a store menu  
 WHEN I pressed the ` SAVE ` button  
 THEN the updated version will be sent to the data base  
     
