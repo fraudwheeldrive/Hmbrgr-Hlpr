@@ -29,8 +29,8 @@ const restaurantdata = [
   },
   {
     restaurant_number: 4,
-    city: "Missisauga",
-    address: "246 Array Way, Missisauga Ontario",
+    city: "Mississauga",
+    address: "246 Array Way, Mississauga Ontario",
     user_id: 1
   }
 ];
