@@ -52,12 +52,6 @@ router.get( '/location-menu', (req, res ) => {
 	});
 });
 
-router.get( '/close-location', (req, res ) => {
-	res.render('closelocation', {
-		loggedIn: true
-	});
-});
-
 router.get( '/edit', (req, res ) => {
 	res.render('edit-menu', {
 		loggedIn: true
@@ -70,12 +64,47 @@ router.get( '/single-location-menu', (req, res ) => {
 	});
 });
 
-router.get( '/confirm-closing', (req, res ) => {
-	res.render('closelocationconfirm', {
-		loggedIn: true
+router.get( '/close-location', (req, res ) => {
+  Restaurant.findAll({
+    include: [
+      {
+        model: Menu,
+        attributes: ['id', 'description', 'ingredients', 'price', 'location' ]
+      }
+    ]
+  })
+	.then(dbRestaurantData => {
+		// pass a single post object into the homepage template
+		const restaurants = dbRestaurantData.map(restaurant => restaurant.get({ plain: true }));
+		res.render('closelocation', { restaurants, loggedIn: true });
+	})
+	.catch(err => {
+		console.log(err);
+		res.status(500).json(err);
 	});
 });
 
+router.get('/confirm-closing/:id', (req, res) => {
+  Restaurant.findOne({
+    where: {
+      id: req.params.id
+    },
+    attributes: ['id', 
+      'address', 
+    ]
+  }).then(dbRestaurantData => {
+    const restaurant = dbRestaurantData.get({ plain: true });
+
+    res.render('closelocationconfirm', {
+		restaurant,
+    loggedIn: true
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+  });
+});
 
 
 module.exports = router;

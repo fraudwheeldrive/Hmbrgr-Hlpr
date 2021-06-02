@@ -12,15 +12,19 @@ Restaurant.init(
       primaryKey: true,
       autoIncrement: true
     }, 
-    restaurant_number: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
     city: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     address: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    phone: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    email: {
       type: DataTypes.STRING,
       allowNull: false,
     },
