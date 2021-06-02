@@ -28,10 +28,7 @@ Contact.init(
         type: DataTypes.TEXT,
         allowNull: false   
     },
-    lastname: {
-        type: DataTypes.TEXT,
-        allowNull: false   
-    },
+    
     address: {
         type: DataTypes.TEXT,
         allowNull: false   
@@ -51,11 +48,8 @@ Contact.init(
     zip: {
         type: DataTypes.TEXT,
         allowNull: false   
-    },
-    gridCheck: {
-        type: DataTypes.TEXT,
-        allowNull: false   
-    },  
+    }
+    
   },
   {
     sequelize,
