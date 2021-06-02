@@ -11,7 +11,7 @@ const { Restaurant } = require("../models");
 const restaurantdata = [
   {
     Id: 1,
-    city:"Toronto Ontario",
+    city:"Toronto",
     address: "123 function rd",
     phone: '416-614-1641' ,
     email: "owner@hmbrgr.com",
@@ -19,7 +19,7 @@ const restaurantdata = [
   },
   {
     Id: 2,
-    city:"Milton Ontario",
+    city:"Milton",
     address: "456 method crt, Milton Ontario",
     phone: '905-614-1641',
     email: 'manager@hmbrgr.com',
@@ -28,24 +28,18 @@ const restaurantdata = [
   },
   {
     Id: 3,
-    city:"London Ontario",
+    city:"London",
     address: "890 Variable Blvd, London Ontario",
     phone: '514-614-1641',
     email: 'Teamlead@hmbrgr.com',
     user_id: 1 
   },
   {
-<<<<<<< HEAD
-    restaurant_number: 4,
-    city: "Mississauga",
-    address: "246 Array Way, Mississauga Ontario",
-=======
     Id: 4,
-    city:"Mississauga Ontario",
+    city:"Mississauga",
     address: "246 Array Way",
     phone: '905-509-1641',
     email: 'socialmedia@hmbrgr.com',
->>>>>>> develop
     user_id: 1
   }
 ];

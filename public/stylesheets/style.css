@@ -206,7 +206,9 @@ main nav ul li a {
     left: 0;
     right: 0;
     text-align: center;
-  }
+}
+
+
 .foot{
     position: absolute;
     font-weight: lighter;
@@ -227,6 +229,7 @@ main nav ul li a {
     
     
 }
+
 
 footer div{
     background-color: rgba(3, 3, 3, 0.781);
