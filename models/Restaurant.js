@@ -13,7 +13,7 @@ Restaurant.init(
       autoIncrement: true
     }, 
     restaurant_number: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false
     },
     city: {
