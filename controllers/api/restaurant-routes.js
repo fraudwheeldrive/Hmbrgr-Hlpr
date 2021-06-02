@@ -75,7 +75,6 @@ router.get('/:id', (req, res) => {
 // add a restaurant
 router.post('/', (req, res) => {
   Restaurant.create({
-    restaurant_number: req.body.restaurant_number,
     address: req.body.address,
     city: req.body.city
   })
@@ -89,8 +88,7 @@ router.post('/', (req, res) => {
 // //update a restaurant
 router.put('/:id' , (req, res) => {
   Restaurant.update(
-    {
-      restaurant_number: req.body.restaurant_number,      
+    {     
       address: req.body.address,
       city: req.body.city
     },
