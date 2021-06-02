@@ -1,9 +1,14 @@
 {{#each restaurants}}
-  <a href="/dashboard/confirm-closing/{{id}}">
+  
     <div class="card" style="width: 18rem;">
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">{{address}}</li>
+        <a href="/dashboard/confirm-closing/{{id}}">
+        <li class="list-group-item"> Restaurant Number:{{id}}</li>
+        </a>
+        <li class="list-group-item">Address: {{address}}</li>
+        <li class="list-group-item">Phone Number:{{phone}}</li>
+        <li class="list-group-item">Email:{{email}}</li>
       </ul>
     </div>
-  </a>
+  
 {{/each}}

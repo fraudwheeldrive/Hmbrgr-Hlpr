@@ -84,12 +84,27 @@ router.get( '/close-location', (req, res ) => {
 	});
 });
 
-router.get( '/confirm-closing/:id', (req, res ) => {
-	res.render('closelocationconfirm', {
-		loggedIn: true
-	});
-});
+router.get('/confirm-closing/:id', (req, res) => {
+  Restaurant.findOne({
+    where: {
+      id: req.params.id
+    },
+    attributes: ['id', 
+      'address', 
+    ]
+  }).then(dbRestaurantData => {
+    const restaurant = dbRestaurantData.get({ plain: true });
 
+    res.render('closelocationconfirm', {
+		restaurant,
+    loggedIn: true
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+  });
+});
 
 
 module.exports = router;
