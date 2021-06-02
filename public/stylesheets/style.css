@@ -207,7 +207,11 @@ main nav ul li a {
     right: 0;
     text-align: center;
 }
-
+.meta {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+}
 
 .foot{
     position: absolute;
