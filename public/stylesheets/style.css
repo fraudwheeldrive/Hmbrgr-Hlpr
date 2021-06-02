@@ -23,7 +23,7 @@
 background-image: url("../images/AdobeStock_127928024.jpeg");
 
 /* Set a specific height */
-min-height: 1200px;
+min-height: 1500px;
 
 /* Create the parallax scrolling effect */
 background-attachment: fixed;
@@ -115,7 +115,7 @@ header nav a {
     position: absolute;
     font-weight: lighter;
     width: 30%;
-    height: 46%;
+    height: 25%;
     overflow: hidden;
     background-color: rgb(20, 20, 20);
     opacity: 60%;    
@@ -131,6 +131,7 @@ header nav a {
 } 
 
 
+
 main {
     display: flex;
     justify-content: left;
@@ -142,7 +143,7 @@ main {
     text-align: left;
     font-size: 20px;
     /* color: rgb(7, 7, 7); */
-    top: 750px;
+    top: 1100px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
     
 }
@@ -205,7 +206,13 @@ main nav ul li a {
     left: 0;
     right: 0;
     text-align: center;
-  }
+}
+.meta {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+}
+
 .foot{
     position: absolute;
     font-weight: lighter;
@@ -226,6 +233,7 @@ main nav ul li a {
     
     
 }
+
 
 footer div{
     background-color: rgba(3, 3, 3, 0.781);
