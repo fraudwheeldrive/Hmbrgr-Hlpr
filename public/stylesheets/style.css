@@ -142,7 +142,7 @@ main {
     text-align: left;
     font-size: 20px;
     /* color: rgb(7, 7, 7); */
-    top: 900px;
+    top: 750px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
     
 }
@@ -196,11 +196,16 @@ main nav ul li a {
     padding: 10px 20px;
     font-size: 20px;
 }
-.background-contact{
-    width: 70%;
+.background-contact {
+    width: 80%;
     margin: 10px 270px 0px;
-
-}
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
 .foot{
     position: absolute;
     font-weight: lighter;
