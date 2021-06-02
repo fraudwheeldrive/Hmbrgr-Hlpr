@@ -179,8 +179,12 @@ main nav ul li a {
     
 }
 
+.signup-form{
+    width: 70%;
+    margin: 10px 270px 0px;     
+    
 
-
+}
 /* contact page style  */
 .display-4 {
     font-family: Helvetica, Arial, sans-serif;
