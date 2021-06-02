@@ -41,6 +41,21 @@ router.get( '/login', (req, res ) => {
     res.render( 'login' )
   });
   
-
+  router.get("/all-menu-items", (req, res) => {
+    Menu.findAll({
+      attributes: ["id", "description", "ingredients", "price", "location"],
+  
+    })
+      .then((dbMenuData) => {
+        // pass a single post object into the homepage template
+        const menuItems = dbMenuData.map((menu) => menu.get({ plain: true }));
+        res.render("allmenu", { menuItems });
+      })
+      .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+        
+      });
+  });
 
 module.exports = router;
