@@ -16,6 +16,10 @@ Restaurant.init(
       type: DataTypes.INTEGER,
       allowNull: false
     },
+    city: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     address: {
       type: DataTypes.STRING,
       allowNull: false,

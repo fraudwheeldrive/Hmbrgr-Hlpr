@@ -3,7 +3,36 @@ const sequelize = require('../config/connection');
 const { Restaurant, Menu, User } = require('../models');
 
 router.get( '/', (req, res ) => {
-    res.render( 'homepage' )
+    res.render( 'homepage' )    
+});
+
+router.get( '/location/:location', (req, res ) => {
+  const location = req.params.location
+  Restaurant.findOne({
+    where: {
+      city: location
+    },
+    include: [
+      {
+        model: Menu,
+        attributes: ['id', 'description', 'ingredients', 'price' ]
+      }
+    ]
+  })
+  .then((dbLocationData) => {
+    if (!dbLocationData) {
+      res.status(404).json({ message: 'No location found with this city' });
+      return;
+    }
+    const location = dbLocationData.get({ plain: true });
+    res.render('locations', {
+      location,
+    });
+  })
+  .catch((err) => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
 router.get( '/contact', (req, res ) => {
