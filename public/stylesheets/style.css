@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+ 
  body {
 
     color: grey;
@@ -271,9 +271,31 @@ footer div{
     padding: 40px;
 }
 
-.confirm-close {
-    font-weight: bolder;
+.page-title {
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
 }
+
+.page-list {
+    justify-content: center;
+    background-color:rgb(158, 146, 70);
+    border-radius: 25px;
+    padding: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+}
+
+.page {
+  border-bottom: 1px dotted white;
+  padding: 10px;
+}
+
+.title {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 
 
 @media screen and (min-width: 768px){
