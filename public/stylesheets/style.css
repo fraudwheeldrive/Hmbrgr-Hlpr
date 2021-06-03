@@ -23,7 +23,7 @@
 background-image: url("../images/AdobeStock_127928024.jpeg");
 
 /* Set a specific height */
-min-height: 1500px;
+min-height: 2200px;
 
 /* Create the parallax scrolling effect */
 background-attachment: fixed;
@@ -206,6 +206,7 @@ main nav ul li a {
     left: 0;
     right: 0;
     text-align: center;
+    
 }
 .meta {
     display: flex;
@@ -251,15 +252,18 @@ footer div{
 
 .dash-link {
     text-transform: uppercase;
-    font-size: 30px;
-    padding: 10px;
-    background-color:rgb(148, 132, 30);
-    margin: 20px;
+    font-size: 30px;    
+    margin: 30px;
     color: white;
+    background-color:rgb(173, 169, 139);
+    border-radius: 25px;
+    padding: 40px;
+    width: 60%;
 }
 
 .dash-cont {
-    margin-top: 50px;
+    margin: 50px;   
+    
 }
 
 .col-form-label {
@@ -280,12 +284,14 @@ footer div{
 }
 
 .page-title {
-    padding: 20px;
+    padding: 60px;
     text-align: center;
-    font-size: 30px;
+    font-size: 60px;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.page-list {
+.location-display {
     justify-content: center;
     background-color:rgb(158, 146, 70);
     border-radius: 25px;
@@ -308,20 +314,37 @@ footer div{
     font-weight: bolder;
 }
 
+.location-name{
+    font-size: 40px;
 
+}
 
+.page-list{
+    width: 90%;
+    margin: 10px 270px 0px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: left;
+    background-color: rgb(201, 201, 176);
+    border-radius: 20px;
+    padding: 40px;
+   
+}
 
-@media screen and (min-width: 768px){
-    header h1 {        
-        font-weight: lighter;
-        font-size: 120px;       
-       
-    }
-    .foot{
-        
-        background-color: rgb(2, 2, 2);    
-               
-        font-size: 80px;        
-        
-    }
+.display{
+    width: 30%;
+   
+    position: absolute;
+    
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgb(230, 230, 211);
+    color: black;
+    font-size: 40px;
+    
 }
