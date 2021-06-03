@@ -1,16 +1,16 @@
 <h3 class="menu-title"> Menu Items</h3>
 <ol class="menu-list">
   {{#each menuItems as |menuItems|}}
-  <li>
+  <li class="menu-display">
     <article class="menu">
       <div class="title">
         <span>Menu Item:({{description}})</span>
       </div>
       <div class="meta">
-        Description: {{ingredients}} 
-        price: ${{price}} available
-        at
-        Store Number: {{location}}
+        <p>Description: {{ingredients}}</p> 
+        <p>price: ${{price}} available</p>
+        <p>at</p>
+        <p>Store Number: {{location}}</p>
 
       <a href="/single-menu/{{menu.id}}">{{menu.description.price}} Edit Menu Item</a>
       </div>
