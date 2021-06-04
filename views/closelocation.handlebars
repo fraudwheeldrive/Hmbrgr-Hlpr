@@ -1,8 +1,11 @@
-</h1>Which location would you like to close?</h1>
+<div class="closelocation">
+  </h1>Which location would you like to close?</h1>
+</div>
 
-{{#each restaurants}}
+<div class="each-card">
+  {{#each restaurants}}
   
-    <div class="card" style="width: 18rem;">
+    <div class="close-location-card card" style="width: 35rem;">
       <ul class="list-group list-group-flush">
         <a href="/dashboard/confirm-closing/{{id}}">
         <li class="list-group-item"> Restaurant Number: {{id}}</li>
@@ -14,4 +17,6 @@
       </ul>
     </div>
   
-{{/each}}
+  {{/each}}
+
+</div>
