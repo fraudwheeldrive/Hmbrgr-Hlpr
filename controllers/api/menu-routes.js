@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
       // include the Restaurant location here:
       {
         model: Restaurant,
-        attributes: ['id', 'restaurant_number', 'address'],
+        attributes: ['id', 'address'],
       }
     ]
   })
@@ -29,7 +29,7 @@ router.get('/:id', (req, res) => {
       // include the Restaurant location here:
       {
         model: Restaurant,
-        attributes: ['id', 'restaurant_number', 'address'],
+        attributes: ['id', 'address'],
       }
     ]
   })
