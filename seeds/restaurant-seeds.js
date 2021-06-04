@@ -1,7 +1,7 @@
 //const sequelize = require('../config/connection');
 const { Restaurant } = require("../models");
 
-//id, Restaurant number, restaurant addresss
+//id, Restaurant number, restaurant address
 
 //id
 //restaurant_number:
