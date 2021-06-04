@@ -1,5 +1,7 @@
-{{#each restaurants}}
-    <div class="stylecard card" style="width: 18rem;">
+<h1 class="view-all-location">ALL LOCATIONS: </h1>
+<div class="each-card">
+  {{#each restaurants}}
+    <div class="close-location-card card stylecard card" style="width: 35rem;">
       <ul class="list-group list-group-flush">
         <li class="list-group-item"> Restaurant Number: {{id}}</li>
         </a>
@@ -11,4 +13,6 @@
       </ul>
     </div>
     <br>
-{{/each}}
+  {{/each}}
+
+</div>

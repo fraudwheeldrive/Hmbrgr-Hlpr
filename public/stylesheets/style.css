@@ -23,7 +23,7 @@
 background-image: url("../images/AdobeStock_127928024.jpeg");
 
 /* Set a specific height */
-min-height: 2200px;
+min-height: 1500px;
 
 /* Create the parallax scrolling effect */
 background-attachment: fixed;
@@ -345,7 +345,6 @@ footer div{
     
 }
 
-
 .closelocation {
     font-size: 40px;
     color: rgb(15, 15, 15);
@@ -371,3 +370,12 @@ footer div{
     margin-inline: 100px;
 }
     
+.view-all-location{
+    padding: 10px 10px 10px;
+    margin: 40px 150px 40px;
+    background-color:rgb(241, 241, 238);
+    width: 19.5%;
+    text-align: center;
+    border-radius: 10px;
+    color:black;
+}
