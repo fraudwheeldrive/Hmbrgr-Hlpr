@@ -39,12 +39,27 @@ router.get("/all-menu-items", (req, res) => {
       });
   });
 
-// router.get( '/all-menu-items', (req, res ) => {
-
-// 	res.render('allmenu', {
-// 		loggedIn: true
-// 	});
-// });
+  router.put('/edit:id', (req, res) => {
+    Menu.findByPk(req.params.id, 
+      {
+        attributes: [
+        'description', 
+        'ingredients',
+        'price',
+        'location'
+        ],
+      }
+    )
+    .then((dbMenuData) => {
+      // pass a single post object into the homepage template
+      const menu = dbMenuData.map((menu) => menu.get({ plain: true }));
+      res.render("edit-menu", { menu, loggedIn: true });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
 router.get( '/location-menu', (req, res ) => {
   Restaurant.findAll({
