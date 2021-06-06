@@ -26,10 +26,10 @@
                 <div class="nav-item dropdown">
                     <div class="nav-link dropdown-toggle" data-toggle="dropdown">LOCATION</div>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a href="/location" class="dropdown-item">Toronto</a>
-                        <a href="/location" class="dropdown-item">Mississauga</a>
-                        <a href="/location" class="dropdown-item">Milton</a>
-                        <a href="/location" class="dropdown-item">London</a>
+                        <a href="/location/Toronto" class="dropdown-item">Toronto</a>
+                        <a href="/location/Mississauga" class="dropdown-item">Mississauga</a>
+                        <a href="/location/Milton" class="dropdown-item">Milton</a>
+                        <a href="/location/London" class="dropdown-item">London</a>
                     </div>
                 </div>
           </ul>
@@ -51,8 +51,9 @@
           <h6>&copy;2021 Project 8 Team Ltd. All rights reserved</h6>
         </div>
       </footer>
-
+      {{#if loggedIn}}
         <script src="/javascript/logout.js"></script>  
+      {{/if}}
     </body>
 </section>
 

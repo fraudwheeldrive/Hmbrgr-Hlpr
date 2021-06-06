@@ -22,6 +22,31 @@ router.get('/', (req, res) => {
 
 //restaurant by id 
 
+router.get('/city/:city', (req, res) => {
+  Restaurant.findOne({
+    where: {
+      city: req.params.city
+    },
+    include: [
+      {
+        model: Menu,
+        attributes: ['id', 'description', 'ingredients', 'price' ]
+      }
+    ]
+  })
+    .then(dbRestaurantData => {
+      if (!dbRestaurantData) {
+        res.status(404).json({ message: 'No Restaurant found with this id' });
+        return;
+      }
+      res.json(dbRestaurantData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
 router.get('/:id', (req, res) => {
   Restaurant.findOne({
     where: {
@@ -45,13 +70,16 @@ router.get('/:id', (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
-  });
+});
 
 // add a restaurant
 router.post('/', (req, res) => {
   Restaurant.create({
-    restaurant_number: req.body.restaurant_number,
-    address: req.body.address
+    city: req.body.city,
+    address: req.body.address,
+    phone: req.body.phone,
+    email: req.body.email,
+    user_id: req.body.user_id
   })
   .then(dbRestaurantData => res.json(dbRestaurantData))
   .catch(err => {
@@ -63,9 +91,9 @@ router.post('/', (req, res) => {
 // //update a restaurant
 router.put('/:id' , (req, res) => {
   Restaurant.update(
-    {
-      restaurant_number: req.body.restaurant_number,
-    address: req.body.address
+    {     
+      address: req.body.address,
+      city: req.body.city
     },
     {
       where: {
@@ -86,8 +114,8 @@ router.put('/:id' , (req, res) => {
   });
 });
 
-// //delete a Restaurant
-router.delete('/:id ', (req, res) => {
+//delete a Restaurant
+router.delete('/:id', (req, res) => {
   Restaurant.destroy({
     where: {
       id:req.params.id

@@ -1,10 +1,11 @@
-async function deleteFormHandler(event) {
+//FOR USERS DELETING THIER OWN POSTS
+async function deleteLocationHandler(event) {
   event.preventDefault();
 
   const id = window.location.toString().split('/')[
     window.location.toString().split('/').length - 1
   ];
-  const response = await fetch(`/api/menu/${id}`, {
+  const response = await fetch(`/api/restaurant/${id}`, {
     method: 'DELETE'
   });
 
@@ -16,4 +17,4 @@ async function deleteFormHandler(event) {
 
 }
 
-document.querySelector('.delete').addEventListener('delete', deleteFormHandler);
+document.querySelector('.close-location').addEventListener('click', deleteLocationHandler);
