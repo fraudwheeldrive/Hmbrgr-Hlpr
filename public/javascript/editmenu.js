@@ -2,15 +2,15 @@ async function editFormHandler(event) {
   event.preventDefault();
 
   const menuDescription = document
-    .querySelector('input[name="menu-description"]')
+    .querySelector('input[name="#menu-description"]')
     .value.trim();
   const menuIngredients = document
-    .querySelector('input[name="menu-ingredients"]')
+    .querySelector('input[name="#menu-ingredients"]')
     .value.trim();
   const menuPrice = document
-    .querySelector('input[name="menu-price"]')
+    .querySelector('input[name="#menu-price"]')
     .value.trim();
-  const menuId = document.querySelector('input[name="menu-id"]').value.trim();
+  const menuId = document.querySelector('input[name="#menu-id"]').value.trim();
 
   const id = window.location.toString().split("/")[
     window.location.toString().split("/").length - 1
