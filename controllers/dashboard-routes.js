@@ -31,8 +31,9 @@ router.get("/all-menu-items", (req, res) => {
       .then((dbMenuData) => {
         // pass a single post object into the homepage template
         const menu = dbMenuData.map((menu) => menu.get({ plain: true }));
-        res.render("allmenu", { menu, loggedIn: true });
+        res.render("allmenu", { menu});
       })
+      //{ menu, loggedIn: true });
       .catch((err) => {
         console.log(err);
         res.status(500).json(err);
