@@ -1,16 +1,10 @@
 async function editFormHandler(event) {
   event.preventDefault();
 
-  const menuDescription = document
-    .querySelector('input[name="menu-description"]')
-    .value.trim();
-  const menuIngredients = document
-    .querySelector('input[name="menu-ingredients"]')
-    .value.trim();
-  const menuPrice = document
-    .querySelector('input[name="menu-price"]')
-    .value.trim();
-  const menuId = document.querySelector('input[name="menu-id"]').value.trim();
+  const description = document.querySelector('input[name="menu-description"]').value.trim();
+  const ingredients = document.querySelector('input[name="menu-ingredients"]').value.trim();
+  const price = document.querySelector('input[name="menu-price"]').value.trim();
+  const location = document.querySelector('input[name="menu-id"]').value.trim();
 
   const id = window.location.toString().split("/")[
     window.location.toString().split("/").length - 1
@@ -19,10 +13,10 @@ async function editFormHandler(event) {
   const response = await fetch(`/api/menu/${id}`, {
     method: "PUT",
     body: JSON.stringify({
-      menuDescription,
-      menuIngredients,
-      menuPrice,
-      menuId,
+      description,
+      ingredients,
+      price,
+      location,
     }),
     headers: {
       "Content-Type": "application/json",
@@ -36,6 +30,4 @@ async function editFormHandler(event) {
   }
 }
 
-document
-  .querySelector(".new-form-style")
-  .addEventListener("submit", editFormHandler);
+document.querySelector(".new-form-style").addEventListener("submit", editFormHandler);
