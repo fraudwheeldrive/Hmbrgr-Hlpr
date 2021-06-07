@@ -52,18 +52,24 @@ router.get("/all-menu-items", (req, res) => {
         'location'
       ]
     }).then(dbMenuData => {
+      if (dbMenuData) {
       const menu = dbMenuData.get({ plain: true });
   
       res.render("edit-menu", {
       menu,
       loggedIn: true
       })
+    } else {
+      res.status(404).end();
+    }
+  })
       .catch(err => {
         console.log(err);
         res.status(500).json(err);
       });
     });
-  });
+
+
 
 router.get( '/location-menu', (req, res ) => {
   Restaurant.findAll({
