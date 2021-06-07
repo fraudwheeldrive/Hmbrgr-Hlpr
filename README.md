@@ -67,6 +67,16 @@ THEN the updated version will be sent to the data base
 WHEN I click `LOGOUT` in the `NAVBAR`  
 THEN I will be logged out and re-directed to the login page  
 
+## Initial Application design 
+![alt text](https://github.com/fraudwheeldrive/Hmbrgr-Hlpr/blob/develop/public/images/super-hip-design.png
+)
+
+## Deployed Application 
+https://hmbrgr-hlpr.herokuapp.com/
+
+## Github Repository 
+https://github.com/fraudwheeldrive/Hmbrgr-Hlpr
+
 ## built with: 
 *   "bcrypt": "^5.0.1",
 *   "connect-session-sequelize": "^7.1.1",
