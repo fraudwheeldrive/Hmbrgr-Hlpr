@@ -143,18 +143,21 @@ router.get('/confirm-closing/:id', (req, res) => {
       'address', 
     ]
   }).then(dbRestaurantData => {
+    if (dbRestaurantData) {
     const restaurant = dbRestaurantData.get({ plain: true });
 
     console.log(restaurant)
     res.render('closelocationconfirm', {
 		restaurant,
     loggedIn: true
-    })
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
     });
-  });
+  } else {
+    res.status(404).end();
+  }
+})
+.catch(err => {
+  res.status(500).json(err);
+});
 });
 
 
