@@ -1,3 +1,4 @@
+
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Restaurant, Menu, User } = require('../models');
@@ -33,18 +34,34 @@ router.get("/all-menu-items", (req, res) => {
         const menu = dbMenuData.map((menu) => menu.get({ plain: true }));
         res.render("allmenu", { menu, loggedIn: true });
       })
+      //{ menu, loggedIn: true });
       .catch((err) => {
         console.log(err);
         res.status(500).json(err);
       });
   });
 
-// router.get( '/all-menu-items', (req, res ) => {
-
-// 	res.render('allmenu', {
-// 		loggedIn: true
-// 	});
-// });
+  router.put('/edit:id', (req, res) => {
+    Menu.findByPk(req.params.id, 
+      {
+        attributes: [
+        'description', 
+        'ingredients',
+        'price',
+        'location'
+        ],
+      }
+    )
+    .then((dbMenuData) => {
+      // pass a single post object into the homepage template
+      const menu = dbMenuData.map((menu) => menu.get({ plain: true }));
+      res.render("edit", { menu, loggedIn: true });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
 router.get( '/location-menu', (req, res ) => {
   Restaurant.findAll({
