@@ -1,10 +1,10 @@
-# Hmbrgr-Hlpr
+# Super-Hip 
 Group Project 2:  A Restaurant Menu CMS 
 
 ## Description
 
 
-The **Hmbrgr-Hlpr** project is a Restaurant Menu CMS created for centralized chain restaurants with multiple stores. It aims to ease the process of updating menu items and adjusting menu prices in response to different factors, such as: seasonality, supply shortage and projected sales.  
+The **Super-Hip** project is a Restaurant Menu CMS created for centralized chain restaurants with multiple stores. It aims to ease the process of updating menu items and adjusting menu prices in response to different factors, such as: seasonality, supply shortage and projected sales.  
 Our system also allow individual store to take off menu items on a store level. This feature would be helpful during an ingredient shortage where some menu items are not available.  
 The system is protected with encrypted user passwords so only authorized user can access and alternate the data base.  
 Additional store can be registered to the system as the restaurant chain expand.
