@@ -114,8 +114,8 @@ header nav a {
 .welcome-form {
     position: absolute;
     font-weight: lighter;
-    width: 30%;
-    height: 25%;
+    width: 35%;
+    height: auto%;
     overflow: hidden;
     background-color: rgb(20, 20, 20);
     opacity: 60%;    
@@ -125,7 +125,7 @@ header nav a {
     font-size: 20px;
     color: rgb(216, 209, 147);
     top: 230px;
-    left: 90PX;   
+    left: 60PX;   
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     border-radius: 10px;
 } 
